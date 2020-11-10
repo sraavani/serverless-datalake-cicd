@@ -71,7 +71,7 @@ resource "google_dataflow_job" "dataflow_job" {
     JSONPath               = "gs://${var.source_gcs_bucket}/bq_schema.json"
     javascriptTextTransformGcsPath = "gs://${var.source_gcs_bucket}/etl.js"
     inputFilePattern       = "gs://${var.source_gcs_bucket}/cc_records.csv"
-    outputTable            = "${var.project_id}:${google_bigquery_dataset.default.dataset_id}.credit_cards"
+    outputTable            = "${var.project_id}:${google_bigquery_dataset.default.dataset_id}.sample_userdata"
     bigQueryLoadingTemporaryDirectory = "gs://${local.gcs_bucket_name}/tmp_dir1"
   }
   depends_on = [google_storage_bucket.tmp_dir_bucket]
