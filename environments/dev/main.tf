@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Serverless Data Lake CI/CD 1
+# Serverless Data Lake CI/CD 2
 
 terraform {
   required_version = ">= 0.12.0"
